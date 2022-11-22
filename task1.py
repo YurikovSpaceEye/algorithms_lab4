@@ -2,7 +2,6 @@ from task1_functions import quick_sort, comb_sort
 import timeit
 import copy
 import random
-import os
 
 def get_shuffled_array_of_n(n):
     array = [i for i in range(n)]

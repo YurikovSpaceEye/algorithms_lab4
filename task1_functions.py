@@ -1,11 +1,11 @@
-def quick_sort(array):
+def quick_sort(arr):
     less = []
     equal = []
     greater = []
 
-    if len(array) > 1:
-        pivot = array[0]
-        for x in array:
+    if len(arr) > 1:
+        pivot = arr[0]
+        for x in arr:
             if x < pivot:
                 less.append(x)
             elif x == pivot:
@@ -14,11 +14,11 @@ def quick_sort(array):
                 greater.append(x)
         return quick_sort(less) + equal + quick_sort(greater)
     else:
-        return array
+        return arr
 
 
-def comb_sort(array):
-    n = len(array)
+def comb_sort(arr):
+    n = len(arr)
     step = n
     swaps = True
     while step > 1 or swaps:
@@ -26,6 +26,6 @@ def comb_sort(array):
         swaps = False
         for i in range(n - step):
             j = i+step
-            if array[i] > array[j]:
-                array[i], array[j] = array[j], array[i]
+            if arr[i] > arr[j]:
+                arr[i], arr[j] = arr[j], arr[i]
                 swaps = True
